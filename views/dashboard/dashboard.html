@@ -1,0 +1,191 @@
+<appsidenav></appsidenav>
+<appnavbar></appnavbar>
+<main>
+    <div class="row" id="main-row">
+        <div class="col s12 m9 z-depth-1" id="top-main-col">
+            <div id="title-card">
+                <div class="card white z-depth-0">
+                    <div class="card-content grey-text">
+                        <div row="row"><span class="card-title grey-text">DASHBOARD</span></div>
+                        <div row="row"><span id="clock" class="right card-content"></span></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card-panel z-depth-0" style="margin:0; background-color: rgba(0,0,0,0); padding: 10px 24px">
+                        <span class="card-title">
+                            HOY
+                                <span class="badge light" data-badge-caption="usuarios nuevos">{{today.usuarios}}</span>
+                                <span class="badge light" data-badge-caption="viajes">{{today.viajes}}</span>
+                        </span>
+                </div>
+            </div>
+            <div class="row center-row" id="row-1">
+                <div class="col s12 m12">
+                    <div class="card-panel z-depth-0">
+                        <div class="row" id="weekly-header">
+                                <span class="card-title">estadísticas principales </span>
+                                <div input-field class="col s12 m4 right">
+                                    <select 
+                                        ng-model="periodChart.period" 
+                                        ng-options="period for period in selectPeriod"
+                                        ng-change="switchLineChart()"
+                                        material-select watch>
+                                    </select>
+                                </div>
+                        </div>
+                        <div class="divider"></div>
+                        <div class="row">
+                            <div class="col s12 m12" id="weekly-chart-div">
+                                    <canvas id="line-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row center-row" id="row-2">
+                <div class="col s12 m8" id="current-drivers">
+                    <div class="card-panel white z-depth-0">
+                        <span class="card-title">Mensajeros Activos</span>
+                        <div class="divider"></div>
+                        <ul class="collection styled-scrollbar">
+                            <li class="collection-item avatar" ng-repeat="order in currentOrders" ng-if="order.terminado === false">
+                                <a class="modal-trigger" href="#demoModal"><img src="img/profile.jpg" class="circle"/></a>
+                                <span class="title">{{order.conductor}}</span>
+                                <p>Usuario: {{order.usuario}}</p>
+                            </li>
+                        </ul>       
+                    </div>
+                </div>
+                <div class="col s12 m4" id="new-info">
+                    <div class="card-panel white z-depth-0">
+                        <div class="row" id="new-info-header">
+                            <span class="card-title">redes sociales</span>
+                        </div>
+                        <div class="divider"></div>
+                        <ul class="collection" id="social-media-stats" style="margin-top: 24px !important">
+                            <li class="collection-item avatar" style="padding-bottom: 28px !important">
+                                <a href="facebook.com"><img src="img/fb-art.png" class="circle"/></a>
+                                <span class="title">Facebook</span>
+                                <div class="divider"></div>
+                                <p>Likes: 984</p>
+                            </li>
+                            <li class="collection-item avatar">
+                                <a href="twitter.com"><img src="img/twitter.png" class="circle"/></a>
+                                <span class="title">Twitter</span>
+                                <div class="divider"></div>
+                                <p>Followers: 40 <br/></p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row center-row" id="row-3">
+                <div class="col s12 m12">
+                    <div class="card-panel white z-depth-0">
+                        <span class="card-title">Último mes</span>
+                        <div class="divider"></div>
+                        <div class="row" style="margin-bottom: 0px !important">
+                            <div class="col s12 m3">
+                                <canvas id="new-users-chart"></canvas>
+                            </div>
+                            <div class="col s12 m3">
+                                <div class="card-panel z-depth-0">
+                                    <span class="card-title">+38%</span> 
+                                    <div class="divider"></div>
+                                    <p>{{lastMonth.usuarios}} Usuarios nuevos</p>
+                                    <p>Promedio 59 usuarios nuevos por mes</p>
+                                </div>
+                            </div>
+                            <div class="col s12 m3">
+                                <canvas id="orders-chart"></canvas>
+                            </div>
+                            <div class="col s12 m3">
+                                <div class="card-panel z-depth-0">
+                                    <span class="card-title">+38%</span> 
+                                    <div class="divider"></div>
+                                    <p>{{lastMonth.viajes}} Viajes</p>
+                                    <p>Promedio 59 viajes nuevos por mes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row center-row" id="row-4">
+                    <div class="col s12 m8">
+                        <div class="card-panel z-depth-0">
+                            <span class="card-title">zonas más recurridas</span>
+                            <div class="divider"></div>
+                                        <canvas id="zone-chart"></canvas>
+                        </div>
+                    </div>
+                    <div class="col s12 m4">
+                        <div class="card-panel z-depth-0" id="top-users">
+                            <span class="card-title">usuarios</span>
+                            <div class="divider"></div>
+                                <ul class="collection styled-scrollbar">
+                                    <li  style="font-size:13px" class="collection-item" ng-repeat="user in users">{{user.name}}
+                                        <span class="badge" style="font-size:12px">{{user.orders}}</span>
+                                    </li>
+                                </ul>
+                        </div>
+                    </div>
+                </div>
+            <div class="row center-row" id="row-5">
+                <div class="col s12 m12">
+                    <div class="card-panel z-depth-0" id="last-orders">
+                        <span class="card-title">últimos viajes</span>
+                        <div class="divider"></div>
+                        <div class="card-panel z-depth-0  styled-scrollbar">
+                            <table class="bordered responsive">
+                            <thead>
+                              <tr>
+                                  <th>Usuario</th>
+                                  <th>Conductor</th>
+                                  <th>Zona</th>
+                                  <th>Fecha</th>
+                              </tr>
+                            </thead>
+                    
+                            <tbody>
+                              <tr ng-repeat="order in currentOrders" ng-if="order.terminado === true">
+                                <td>{{order.usuario}}</td>
+                                <td>{{order.conductor}}</td>
+                                <td>{{order["zona-origen"]}}</td>
+                                <td>{{order.fecha}}</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col s12 m3 side-bar">
+            <div id="weather-card">
+                <div class="card z-depth-0">
+                    <div class="card-content white-text right" id="weather"></div>
+                </div>
+            </div>
+            <div id="right-feed">
+                <div class="row" style="margin-bottom: 0px !important; border-bottom: 1px solid rgba(231, 234, 223, 0.78);">
+                    <div class="card-panel z-depth-0 feed" id="members-feed">
+                        <span class="card-title">actividad reciente</span>
+                        <div class="divider"></div>
+                        <ul class="collection styled-scrollbar">
+                                <li ng-repeat="feed in recentFeed" class="collection-item dismissable">
+                                    <div>{{feed}}</div></li>
+                        </ul>               
+                    </div>                
+                </div>
+                <div class="row">
+                    <div class="feed styled-scrollbar" id="twitter-feed">
+                        <a class="twitter-timeline" data-lang="es" data-theme="light" href="https://twitter.com/ZubutDelivery">Tweets by ZubutDelivery</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div>     
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</main>

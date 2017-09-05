@@ -1,0 +1,37 @@
+[
+    {
+        "zona": "Jardines del Valle",
+        "origen": 18,
+        "destino": 10
+    },
+    {
+        "zona": "Lomas de Zapopan",
+        "origen": 20,
+        "destino": 20
+    },
+    {
+        "zona": "Puerta de Hierro",
+        "origen": 30,
+        "destino": 30
+    },
+    {
+        "zona": "Ciudad Granja",
+        "origen": 40,
+        "destino": 40
+    },
+    {
+        "zona": "Jardines alcalde",
+        "origen": 22,
+        "destino": 15
+    },
+    {
+        "zona": "Mexicaltzingo",
+        "origen": 25,
+        "destino": 25
+    },
+    {
+        "zona": "Ciudad del Sol",
+        "origen": 35,
+        "destino": 35
+    }
+]

@@ -1,0 +1,74 @@
+[
+    {
+        "id": "A0001",
+        "usuario": "Mariana Soto",
+        "zona-origen": "Ciudad Granja",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Carlos Martínez",
+        "terminado": false,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "Laura Padilla",
+        "zona-origen": "Lomas de Zapopan",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Juan Pérez",
+        "terminado": false,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "Manuel Soto",
+        "zona-origen": "Jardines del Valle",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Valerio González",
+        "terminado": false,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "Natalia Sánchez",
+        "zona-origen": "Jardines del Valle",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Armando García",
+        "terminado": false,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "Abraham Ibarra",
+        "zona-origen": "Ciudad Granja",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Mario Gómez",
+        "terminado": false,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "Emma Córdova",
+        "zona-origen": "Lomas de Zapopan",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Fernando Carrillo",
+        "terminado": true,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "José Ángel Beltrán",
+        "zona-origen": "Jardines del Valle",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Marco Ruiz",
+        "terminado": true,
+        "fecha": "02-09-2017"
+    },
+    {
+        "id": "A0001",
+        "usuario": "Laura Padilla",
+        "zona-origen": "Lomas de Zapopan",
+        "zona-destino": "Puerta de Hierro",
+        "conductor": "Pablo Díaz",
+        "terminado": true,
+        "fecha": "02-09-2017"
+    }
+]

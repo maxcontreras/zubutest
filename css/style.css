@@ -1,0 +1,214 @@
+main{
+    padding-left: 200px;
+    background-color: rgba(245, 248, 239, 0.74);
+}
+
+@media only screen and (max-width : 992px) {
+    main{
+      padding-left: 0;
+    }
+  }
+
+nav{
+    background-color: #373737;
+}
+
+.side-nav{
+    width: 200px;
+    margin-top: 64px;
+}
+
+.side-nav, #user-options{
+    background-color: #F2F2EA;
+}
+
+.side-nav li a:hover, #user-options li a:hover{
+    background-color: #D5D5C7; 
+}
+
+.side-nav ul{
+    margin-top: 0px;
+}
+
+#main-row{
+    margin-bottom: 0px;
+}
+
+.nav-wrapper{
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+#user-options li a, #nav-mobile li a, .card-title{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#user-options li a, .card-title{
+    color: rgba(0,0,0,0.87);
+}
+
+#user-options li a{
+    line-height: 25px;
+}
+
+#title-card{
+    padding: 0;
+}
+
+#title-card .card, #weather-card .card{
+    margin: 0;
+    border-bottom: 3px solid #7ECEF9;
+    height: 117px !important;
+}
+
+#weather-card .card{
+    background-color: #7ECEF9;
+}
+
+.side-bar{
+    padding: 0px !important;
+}
+
+#weather{
+    padding-bottom: 0px;
+}
+
+#weather .card-title{
+    font-size: 40px;
+    color: #ffffff;
+}
+
+.collection{
+    border-width: 0px 0px; 
+    border-color: rgba(231, 234, 223, 0.78);
+    font-size: 12px;
+    margin: 0 !important;
+}
+
+.collection .collection-item.avatar{
+    min-height: 66px !important;
+}
+
+#current-drivers .card-panel .collection{
+    margin-top: 15px !important;
+    height: 200px;
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+.styled-scrollbar::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.styled-scrollbar::-webkit-scrollbar
+{
+	width: 8px;
+    background-color: #F5F5F5;
+    border-radius: 10px;
+}
+
+.styled-scrollbar::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D5D5C7;
+}
+
+.select-wrapper input.select-dropdown {
+    border: none;
+    border-bottom: 0px;
+    height: 2rem;
+    line-height: 2rem;
+    font-size: 1rem;
+    color: #9e9e9e;
+    margin-bottom: 0px;
+}
+
+.dropdown-content li>a, .dropdown-content li>span {
+    font-size: 1rem;
+    color: #9e9e9e;
+    line-height: 14px;
+    padding: 10px 12px;
+}
+
+.dropdown-content li {
+    min-height: 35px;
+}
+
+.feed{
+    margin-top: 0px;
+    margin-left: 2px;
+}
+
+.feed .collection{
+    height: 200px;
+}
+
+#twitter-feed{
+    height: 400px;
+}
+
+.feed .collection, #twitter-feed, #top-users .collection, #last-orders .card-panel{
+    max-height: 100%;
+    overflow-y: auto;
+}
+
+#new-info .card-panel{
+    height: 286px;
+}
+
+#new-info .card-panel .row .card{
+    height: 120px;
+    margin-bottom: 0px !important;
+}
+
+#new-info-header, #weekly-header{
+    margin-bottom: 0px !important;
+}
+
+#new-info .card-panel .collection li{
+    border-width: 0;
+}
+
+
+.input-field{
+    margin-top: 0px !important;
+}
+
+#weekly-chart-div{
+    margin-top: 24px;
+}
+
+#clock,#top-main-col{
+    padding: 0px;
+}
+
+#members-feed{
+    margin-bottom: 0px;
+}
+
+#members-feed{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#members-feed .card-title{
+    padding-left: 15px;
+}
+
+.center-row{
+    margin-bottom: 0 !important;
+}
+
+#top-users .collection, #last-orders .card-panel{
+    max-height: 261px;
+}
+
+#last-orders .card-panel{
+    padding: 0 !important;
+}
+
+
